@@ -16,7 +16,7 @@ public class TrabajoPractico1 {
         palabras[1] = "es";
         palabras[2] = "una";
         palabras[3] = "frase";
-        
+        System.out.println("tomba");
         System.out.println("Iterando Arreglos forma 1");
         for (int i = 0; i < palabras.length; i++) {
             String palabra = palabras[i];
