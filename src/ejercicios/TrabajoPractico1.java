@@ -1,6 +1,7 @@
 package ejercicios;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -18,8 +19,7 @@ public class TrabajoPractico1 {
         palabras[3] = "frase";
         System.out.println("tomba");
         System.out.println("Iterando Arreglos forma 1");
-        for (int i = 0; i < palabras.length; i++) {
-            String palabra = palabras[i];
+        for (String palabra : palabras) {
             System.out.println(palabra);
         }
         System.out.println("\n");
@@ -45,9 +45,9 @@ public class TrabajoPractico1 {
         System.out.println("\n");
         
         System.out.println("Iterando Listas forma 2");
-        for (String palabra : palabras) {
+        palabras.forEach((palabra) -> {
             System.out.println(palabra);
-        }
+        });
         
         System.out.println("Iterando Listas forma 3 (Iterador)");
         Iterator<String> iterador = palabras.iterator();
@@ -61,12 +61,54 @@ public class TrabajoPractico1 {
      */
     public void ejercicio3() {
         
+        int [] numeros = new int[5];
+        numeros[0] = 1;
+        numeros[1] = 2;
+        numeros[2] = 3;
+        numeros[3] = 4;
+        numeros[4] = 5;
+        
+        System.out.println("Iterando Arreglos forma 1");
+        for (int i = 0; i < numeros.length; i++) {
+            int numero = numeros[i];
+            System.out.println(Arrays.toString(numeros));
+        }
+        System.out.println("\n");
+        
+        System.out.println("Iterando Arreglos forma 2");
+        
+        for (int numero : numeros) {
+            System.out.println(Arrays.toString(numeros));
+        }
     }
     
     /**
      * Crear una lista de numeros enteros del 1 al 5, recorrerlos y mostarlos de las 3 formas
      */
     public void ejercicio4() {
+     
+        List<Integer> numeros = new ArrayList();
+        numeros.add(1);
+        numeros.add(2);
+        numeros.add(3);
+        numeros.add(4);
+        numeros.add(5);
+        System.out.println("Iterando Listas forma 1");
+        for (int i = 0; i < numeros.size(); i++) {
+            Integer numero = numeros.get(i);
+            System.out.println(numero);
+        }
+        System.out.println("\n");
         
-    }
+        System.out.println("Iterando Listas forma 2");
+        numeros.forEach((numero) -> {
+            System.out.println(numero);
+        });
+        
+        System.out.println("Iterando Listas forma 3 (Iterador)");
+        Iterator<Integer> iterador = numeros.iterator();
+        while(iterador.hasNext()) {
+            System.out.println(iterador.next());
+        }
+}
 }
