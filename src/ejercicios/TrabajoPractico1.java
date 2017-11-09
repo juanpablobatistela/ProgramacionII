@@ -71,14 +71,14 @@ public class TrabajoPractico1 {
         System.out.println("Iterando Arreglos forma 1");
         for (int i = 0; i < numeros.length; i++) {
             int numero = numeros[i];
-            System.out.println(Arrays.toString(numeros));
+            System.out.println(numero);
         }
         System.out.println("\n");
         
         System.out.println("Iterando Arreglos forma 2");
         
         for (int numero : numeros) {
-            System.out.println(Arrays.toString(numeros));
+            System.out.println(numero);
         }
     }
     

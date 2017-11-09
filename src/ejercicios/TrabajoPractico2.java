@@ -66,6 +66,11 @@ public class TrabajoPractico2 {
      * Crear una excepcion propia y capturarla y mostrar su contenido.
      */
     public void ejercicio6() {
-        
+        try {
+            System.out.println("Segunda parte");
+            throw new ExcepcionSimpatica("Soy del mas grande de mendoza");
+        }catch(ExcepcionSimpatica e) {
+            System.out.println("excepcion" +  e);
     }
+}
 }

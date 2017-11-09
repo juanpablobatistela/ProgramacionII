@@ -5,3 +5,4 @@ dist/
 nbdist/
 .nb-gradle/
 *.DS_Store
+src/ejercicios/TrabajoPractico2.java
